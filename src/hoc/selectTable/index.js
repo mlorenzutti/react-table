@@ -81,8 +81,8 @@ export default (Component, options) => {
           return this.rowSelector.bind(this)(ci.original)
         },
         width: selectWidth || 30,
-        filterable: false,
-        sortable: false,
+        filterable: true,
+        sortable: true,
         resizable: false,
         style: { textAlign: 'center' },
       }
