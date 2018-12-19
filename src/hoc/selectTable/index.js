@@ -66,13 +66,12 @@ export default (Component, options) => {
         toggleAll,
         keyField,
         selectAll,
-        selectType,
+        selectType,   
         selectWidth,
         SelectAllInputComponent,
         SelectInputComponent,
         ...rest
       } = this.props
-      const { floatingLeft = false } = options
       const select = {
         id: '_selector',
         accessor: () => 'x', // this value is not important
@@ -87,7 +86,7 @@ export default (Component, options) => {
         style: { textAlign: 'center' },
       }
 
-      const columns = floatingLeft ? [...originalCols, select] : [select, ...originalCols]
+      const columns = [select, ...originalCols]
       const extra = {
         columns,
       }
